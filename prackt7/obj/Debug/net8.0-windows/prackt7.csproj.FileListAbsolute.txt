@@ -18,3 +18,5 @@ C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\refi
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.pdb
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.genruntimeconfig.cache
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\ref\prackt7.dll
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.sourcelink.json
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

@@ -1,5 +1,4 @@
-﻿using prackt7.models;
-using System.IO;
+﻿using System.IO;
 using System.Text.Json;
 using System.Windows;
 
@@ -19,9 +18,18 @@ namespace prackt7
         List<int> docsId = new List<int>();
         List<int> pacientsId = new List<int>();
 
-        Doc currDoctor = new Doc();
-        Pacient currPacient = new Pacient();
         Pacient lastInfo = new Pacient();
+
+        private Pacient currentPacient = new Pacient();
+        private Pacient addPacientM = new Pacient();
+
+        private Doc currentDoc = new Doc();
+
+        private Doc enterDoc = new Doc();
+
+        private Doc newDoc = new Doc();
+
+
 
         bool isLogined = false;
 
@@ -29,6 +37,7 @@ namespace prackt7
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private void Form_Initialized(object sender, EventArgs e)
@@ -95,16 +104,8 @@ namespace prackt7
             {
                 if (reg_ConfirmPassword.Text == reg_Password.Text)
                 {
-                    Doc doc = new Doc()
-                    {
-                        Name = reg_Name.Text,
-                        LastName = reg_LastName.Text,
-                        MiddleName = reg_MiddleName.Text,
-                        Password = reg_Password.Text,
-                        Spectialisation = reg_Specialisation.Text,
-                    };
 
-                    var docJson = JsonSerializer.Serialize(doc);
+                    var docJson = JsonSerializer.Serialize(newDoc);
 
                     while (true)
                     {
@@ -135,32 +136,25 @@ namespace prackt7
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(Log_Pass.Text) && !string.IsNullOrEmpty(Log_Id.Text))
+            if (!string.IsNullOrEmpty(enterDoc.Password))
             {
                 try
                 {
                     using (StreamReader sr = new StreamReader($"D_{Log_Id.Text}.json"))
                     {
-                        currDoctor = JsonSerializer.Deserialize<Doc>(sr.ReadLine());
+                        currentDoc = JsonSerializer.Deserialize<Doc>(sr.ReadLine());
                     }
 
-                    if (currDoctor.Password == Log_Pass.Text)
+                    if (currentDoc.Password == Log_Pass.Text)
                     {
-                        Curr_Id.Content = Log_Id.Text;
-                        Curr_Name.Content = currDoctor.Name;
-                        Curr_LastName.Content = currDoctor.LastName;
-                        Curr_MiddleName.Content = currDoctor.MiddleName;
-                        Curr_Specialisation.Content = currDoctor.Spectialisation;
                         isLogined = true;
+                        Curr_Id.Content = Log_Id.Text;
+                        MessageBox.Show(currentDoc.LastName.ToString());
+                        viewDoc.DataContext = currentDoc;
                     }
                     else
                     {
                         MessageBox.Show("Пароль неверный");
-                        Curr_Id.Content = "";
-                        Curr_Name.Content = "";
-                        Curr_LastName.Content = "";
-                        Curr_MiddleName.Content = "";
-                        Curr_Specialisation.Content = "";
                     }
 
 
@@ -204,7 +198,7 @@ namespace prackt7
         {
             if (isLogined)
             {
-                SearchPacient(Search_TextBox.Text, true);
+                SearchPacient(currentPacient.Id.ToString(), true);
             }
             else
             {
@@ -219,15 +213,22 @@ namespace prackt7
             {
                 sw.WriteLine(JsonSerializer.Serialize(lastInfo));
             }
+            ResetUser();
             SearchPacient(lastInfo.Id.ToString(), false);
+        }
+
+        private void ResetUser()
+        {
         }
 
 
         void addPacient()
         {
+            addForm.DataContext = addPacientM;
+
             try
             {
-                if (!string.IsNullOrEmpty(LastName_Add.Text) && !string.IsNullOrEmpty(Name_Add.Text) && !string.IsNullOrEmpty(MiddleName_Add.Text) && !string.IsNullOrEmpty(Date_Add.Text))
+                if (!string.IsNullOrEmpty(addPacientM.LastName) && !string.IsNullOrEmpty(addPacientM.Name) && !string.IsNullOrEmpty(addPacientM.MiddleName) && !string.IsNullOrEmpty(addPacientM.Birthday))
                 {
                     while (true)
                     {
@@ -237,18 +238,10 @@ namespace prackt7
                         if (!docsId.Any(i => i == id))
                         {
 
-                            Pacient p = new Pacient()
-                            {
-                                Name = Name_Add.Text,
-                                LastName = LastName_Add.Text,
-                                MiddleName = MiddleName_Add.Text,
-                                Birthday = Date_Add.Text,
-                            };
-
-
+                            addPacientM.Id = id;
                             using (StreamWriter sw = new StreamWriter($"P_{id}.json"))
                             {
-                                sw.WriteLine(JsonSerializer.Serialize(p));
+                                sw.WriteLine(JsonSerializer.Serialize(addPacientM));
                             }
                             break;
 
@@ -274,22 +267,16 @@ namespace prackt7
                 {
                     using (StreamReader sr = new StreamReader($"P_{id}.json"))
                     {
-                        currPacient = JsonSerializer.Deserialize<Pacient>(sr.ReadLine());
+                        currentPacient = JsonSerializer.Deserialize<Pacient>(sr.ReadLine());
                     }
                     if (updateLastInfo)
                     {
-                        lastInfo = currPacient;
+                        lastInfo = currentPacient;
                     }
-                    currPacient.Id = int.Parse(id);
-                    Pacient_id.Content = currPacient.Id;
-                    Name.Content = currPacient.Name;
-                    LastName.Content = currPacient.LastName;
-                    MiddleName.Content = currPacient.MiddleName;
-                    Birthday.Content = currPacient.Birthday;
-                    LastAppointment.Content = currPacient.LastAppointment ?? "Н/Д";
-                    LastDoctor.Content = currPacient.LastDoctor ?? "Н/Д";
-                    Diagnosis.Content = currPacient.Diagnosis ?? "Н/Д";
-                    Recomendations.Content = currPacient.Recomendations ?? "Н/Д";
+
+                    viewPacient.DataContext = currentPacient;
+                    editForm.DataContext = currentPacient;
+
 
                     if (LastAppointment.Content == "") LastAppointment.Content = "Н/Д";
                     if (LastDoctor.Content == "") LastDoctor.Content = "Н/Д";
@@ -297,14 +284,6 @@ namespace prackt7
                     if (Recomendations.Content == "") Recomendations.Content = "Н/Д";
 
 
-
-
-                    Name_Edit.Text = currPacient.Name;
-                    LastName_Edit.Text = currPacient.LastName;
-                    MiddleName_Edit.Text = currPacient.MiddleName;
-                    Date_Edit.Text = currPacient.Birthday;
-                    Diagnosis_Edit.Text = currPacient.Diagnosis;
-                    Recomendations_Edit.Text = currPacient.Recomendations;
 
                 }
                 catch (Exception e)
@@ -325,20 +304,14 @@ namespace prackt7
             {
                 if (!string.IsNullOrEmpty(LastName_Edit.Text) && !string.IsNullOrEmpty(Name_Edit.Text) && !string.IsNullOrEmpty(MiddleName_Edit.Text) && !string.IsNullOrEmpty(Date_Edit.Text))
                 {
-                    currPacient.Name = Name_Edit.Text;
-                    currPacient.LastName = LastName_Edit.Text;
-                    currPacient.MiddleName = MiddleName_Edit.Text;
-                    currPacient.Birthday = Date_Edit.Text;
-                    currPacient.Diagnosis = Diagnosis_Edit.Text;
-                    currPacient.Recomendations = Recomendations_Edit.Text;
-                    currPacient.LastDoctor = Curr_Id.Content.ToString();
-                    currPacient.LastAppointment = DateTime.Now.ToString();
+                    currentPacient.LastDoctor = Curr_Id.Content.ToString();
+                    currentPacient.LastAppointment = DateTime.Now.ToString();
 
-                    using (StreamWriter sw = new StreamWriter($"P_{currPacient.Id}.json"))
+                    using (StreamWriter sw = new StreamWriter($"P_{currentPacient.Id}.json"))
                     {
-                        sw.WriteLine(JsonSerializer.Serialize(currPacient));
+                        sw.WriteLine(JsonSerializer.Serialize(currentPacient));
                     }
-                    SearchPacient(currPacient.Id.ToString(), false);
+                    SearchPacient(currentPacient.Id.ToString(), false);
 
                 }
                 else
@@ -353,6 +326,39 @@ namespace prackt7
             }
         }
 
+        private void registerForm_Initialized(object sender, EventArgs e)
+        {
+            registerForm.DataContext = newDoc;
+        }
 
+        private void editForm_Initialized(object sender, EventArgs e)
+        {
+            editForm.DataContext = currentPacient;
+        }
+
+        private void addForm_Initialized(object sender, EventArgs e)
+        {
+            addForm.DataContext = addPacientM;
+        }
+
+        private void viewPacient_Initialized(object sender, EventArgs e)
+        {
+            viewPacient.DataContext = currentPacient;
+        }
+
+        private void searchForm_Initialized(object sender, EventArgs e)
+        {
+            searchForm.DataContext = currentPacient;
+        }
+
+        private void viewDoc_Initialized(object sender, EventArgs e)
+        {
+            viewDoc.DataContext = currentDoc;
+        }
+
+        private void enterForm_Initialized(object sender, EventArgs e)
+        {
+            enterForm.DataContext = enterDoc;
+        }
     }
 }
