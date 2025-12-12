@@ -1,0 +1,248 @@
+﻿<Window x:Class="prackt7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prackt7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="900"
+        x:Name="Form" Initialized="Form_Initialized">
+    <DockPanel
+        LastChildFill="false">
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/> 
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="205"/>
+            </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="Gray">
+                    <Label>Форма регистрации пользователя</Label>
+                    <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                        <Label Width="120">Фамилия</Label>
+                        <TextBox x:Name="reg_LastName" Width="200"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                        <Label Width="120">Имя</Label>
+                        <TextBox x:Name="reg_Name" Width="200"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                        <Label Width="120">Отчество</Label>
+                        <TextBox x:Name="reg_MiddleName" Width="200"></TextBox>
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                        <Label Width="120">Специализация</Label>
+                        <TextBox x:Name="reg_Specialisation" Width="200"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                        <Label Width="120">Пароль</Label>
+                        <TextBox x:Name="reg_Password" Width="200"></TextBox>
+                    </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Повторите пароль</Label>
+                    <TextBox x:Name ="reg_ConfirmPassword" Width="200"></TextBox>
+                </StackPanel>
+
+                <Button x:Name="register" Height="30" Margin="8" Click="register_Click">Добавить</Button>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0" Background="Gray    " Margin="0 10">
+                <Label>Форма входа пользователя</Label>
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">ID</Label>
+                    <TextBox x:Name="Log_Id" Width="200"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Пароль</Label>
+                    <TextBox x:Name="Log_Pass" Width="200"></TextBox>
+                </StackPanel>
+
+                <Button Height="30" Margin="8" Click="Button_Click">Войти</Button>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Background="Gray">
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">ID</Label>
+                    <Label x:Name="Curr_Id" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Фамилия</Label>
+                    <Label x:Name="Curr_LastName" Width="200"></Label>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Имя</Label>
+                    <Label x:Name="Curr_Name" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Отчество </Label>
+                    <Label x:Name="Curr_MiddleName" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Специализация</Label>
+                    <Label x:Name="Curr_Specialisation" Width="200"/>
+                </StackPanel>
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" Background="Gray" Margin="8 0 8 8">
+                <Label Width="80" Height="30">Поиск по ID</Label>
+                <TextBox x:Name="Search_TextBox" Width="150" Height="20"></TextBox>
+                <Button x:Name="SearchPacient_Button" Height="20" Margin="8" Click="SearchPacient_Button_Click">Поиск</Button>
+
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Background="Gray" Margin="8 0 8 0">
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">ID</Label>
+                    <Label x:Name="Pacient_id" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Фамилия</Label>
+                    <Label x:Name="LastName" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Имя</Label>
+                    <Label x:Name="Name" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Отчество</Label>
+                    <Label x:Name="MiddleName" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">День рождения</Label>
+                    <Label x:Name="Birthday" Width="200"></Label>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Последний прием</Label>
+                    <Label x:Name="LastAppointment" Width="200"></Label>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">ID Доктора</Label>
+                    <Label x:Name="LastDoctor" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Диагноз</Label>
+                    <Label x:Name="Diagnosis" Width="200"></Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Рекомендации</Label>
+                    <Label x:Name="Recomendations" Width="200"></Label>
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Background="Gray" Margin="0 0 0 8">
+                <Label>Форма добавления пациента</Label>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Фамилия</Label>
+                    <TextBox x:Name="LastName_Add" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Имя</Label>
+                    <TextBox  x:Name="Name_Add" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Отчество</Label>
+                    <TextBox x:Name="MiddleName_Add" Width="170"></TextBox>
+                </StackPanel>
+                    
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Дата рождения</Label>
+                    <TextBox x:Name="Date_Add" Width="170"></TextBox>
+                </StackPanel>
+
+                <Button x:Name="AddPacient_Button" Height="30" Margin="8" Click="AddPacient_Button_Click" Content="Добавить"/>
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Background="Gray">
+                <Label>Форма изменения пациента</Label>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Фамилия</Label>
+                    <TextBox x:Name="LastName_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Имя</Label>
+                    <TextBox  x:Name="Name_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Отчество</Label>
+                    <TextBox x:Name="MiddleName_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Дата рождения</Label>
+                    <TextBox x:Name="Date_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Диагноз</Label>
+                    <TextBox x:Name="Diagnosis_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Width="120">Рекомендации</Label>
+                    <TextBox x:Name="Recomendations_Edit" Width="170"></TextBox>
+                </StackPanel>
+
+
+                <Button x:Name="EditPacient_Button" Height="30" Margin="8" Click="EditPacient_Button_Click">Изменить</Button>
+                <Button x:Name="Recovery_Button" Height="30" Margin="8" Click="Recovery_Button_Click_1">Сбросить</Button>
+
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+        <StatusBar Background="LightGray" DockPanel.Dock="Bottom">
+            <TextBlock x:Name="Counts" DockPanel.Dock="Bottom" 
+    Margin="8">0 Пользователей 0 Пациентов</TextBlock>
+        </StatusBar>
+    </DockPanel>
+</Window>
