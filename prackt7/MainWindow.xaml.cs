@@ -304,8 +304,8 @@ namespace prackt7
             {
                 if (!string.IsNullOrEmpty(LastName_Edit.Text) && !string.IsNullOrEmpty(Name_Edit.Text) && !string.IsNullOrEmpty(MiddleName_Edit.Text) && !string.IsNullOrEmpty(Date_Edit.Text))
                 {
-                    currentPacient.LastDoctor = Curr_Id.Content.ToString();
-                    currentPacient.LastAppointment = DateTime.Now.ToString();
+                    //currentPacient.LastDoctor = Curr_Id.Content.ToString();
+                    //currentPacient.LastAppointment = DateTime.Now.ToString();
 
                     using (StreamWriter sw = new StreamWriter($"P_{currentPacient.Id}.json"))
                     {

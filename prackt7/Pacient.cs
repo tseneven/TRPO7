@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -26,6 +27,7 @@ namespace prackt7
             }
         }
         private string _name;
+
         public string Name { 
             get => _name;
             set
@@ -80,57 +82,33 @@ namespace prackt7
 
             }
         }
-        private string _lastAppointment;
-        public string? LastAppointment
+
+        private string? _phoneNumber;
+
+        public string? PhoneNumber
         {
-            get => _lastAppointment;
+            get => _phoneNumber;
             set
             {
-                if (_lastAppointment != value)
+                if (_phoneNumber != value)
                 {
-                    _lastAppointment = value;
+                    _phoneNumber = value;
                     OnPropertyChanged();
                 }
 
             }
         }
-        private string _lastDoctor;
-        public string? LastDoctor
-        {
-            get => _lastDoctor;
-            set
-            {
-                if (_lastDoctor != value)
-                {
-                    _lastDoctor = value;
-                    OnPropertyChanged();
-                }
 
-            }
-        }
-        private string _diagnosis;
-        public string? Diagnosis
-        {
-            get => _diagnosis;
-            set
-            {
-                if (_diagnosis != value)
-                {
-                    _diagnosis = value;
-                    OnPropertyChanged();
-                }
 
-            }
-        }
-        private string _recomendation;
-        public string? Recomendations
+        private ObservableCollection<Appointment>? _appointmentStories;
+        public ObservableCollection<Appointment>? AppointmentStories
         {
-            get => _recomendation;
+            get => _appointmentStories;
             set
             {
-                if (_recomendation != value)
+                if (_appointmentStories != value)
                 {
-                    _recomendation = value;
+                    _appointmentStories = value;
                     OnPropertyChanged();
                 }
 

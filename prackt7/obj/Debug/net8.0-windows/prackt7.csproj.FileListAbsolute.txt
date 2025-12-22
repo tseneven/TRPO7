@@ -20,3 +20,17 @@ C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prac
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\ref\prackt7.dll
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.sourcelink.json
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Auth.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Auth.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\mainFrames.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\mainFrames.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Register.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Register.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Main.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Main.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Add.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Add.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\DeteilPacient.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\DeteilPacient.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Edit.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Edit.baml
