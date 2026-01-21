@@ -1,0 +1,24 @@
+﻿<Page x:Class="prackt7.Auth"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prackt7"
+      mc:Ignorable="d" 
+      Title="Auth">
+
+    <StackPanel Style="{StaticResource formPanel}">
+        <Label Width="40">Вход</Label>
+        <StackPanel>
+            <Label Style="{StaticResource formLabel}">ID</Label>
+            <TextBox x:Name="Auth_Id" Style="{StaticResource formTextBox}" ></TextBox>
+        </StackPanel>
+        <StackPanel>
+            <Label Style="{StaticResource formLabel}">Пароль</Label>
+            <TextBox Style="{StaticResource formTextBox}" Text="{Binding Password, Mode=TwoWay }"></TextBox>
+        </StackPanel>
+        <Button Click="Button_Click">Вход</Button>
+        <Label x:Name="Reg_But" HorizontalAlignment="Center" >
+            <Hyperlink NavigateUri="Register.xaml">Регистрация</Hyperlink> </Label>
+    </StackPanel>
+</Page>

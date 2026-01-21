@@ -1,0 +1,59 @@
+﻿<Page x:Class="prackt7.Edit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prackt7"
+      mc:Ignorable="d" 
+      Title="Edit">
+
+
+    <DockPanel
+        LastChildFill="false">
+
+        <StackPanel DockPanel.Dock="Top">
+            <Button Click="Button_Click"  Style="{StaticResource DeleteButton}">Назад</Button>
+            <Button Click="Button_Click_1"  Style="{StaticResource AddButton}">Отредактировать</Button>
+        </StackPanel>
+
+
+        <StackPanel x:Name="addForm"  DockPanel.Dock="Top" Style="{StaticResource formPanel}">
+            <Label>Форма добавления пациента</Label>
+
+            <StackPanel>
+                <Label Style="{StaticResource formLabel}">Фамилия</Label>
+                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" Text="{Binding LastName, Mode=TwoWay  }" ></TextBox>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Style="{StaticResource formLabel}">Имя</Label>
+                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}" Text="{Binding Name, Mode=TwoWay  }"></TextBox>
+            </StackPanel>
+
+            <StackPanel >
+                <Label Style="{StaticResource formLabel}">Отчество</Label>
+                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}" Text="{Binding MiddleName, Mode=TwoWay  }"></TextBox>
+            </StackPanel>
+
+            <StackPanel >
+                <Label Style="{StaticResource formLabel}">Дата рождения</Label>
+                <TextBox x:Name="Date_Add" Style="{StaticResource formTextBox}" Text="{Binding Birthday, Mode=TwoWay  }"></TextBox>
+            </StackPanel>
+
+            <StackPanel >
+                <Label Style="{StaticResource formLabel}">Телефон</Label>
+                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}"  Text="{Binding PhoneNumber, Mode=TwoWay  }"></TextBox>
+            </StackPanel>
+
+
+
+        </StackPanel>
+
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="Counts" DockPanel.Dock="Bottom" 
+    ></TextBlock>
+        </StatusBar>
+    </DockPanel>
+
+</Page>

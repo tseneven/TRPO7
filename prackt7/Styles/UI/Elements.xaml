@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Page">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="Height" Value="500"/>
+        <Setter Property="Width" Value="800"/>
+    </Style>
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+    <Style TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+
+    <Style TargetType="StackPanel" x:Key="formPanel">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 8 0 8"/>
+        <Setter Property="Orientation" Value="Vertical"/>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="formLabel">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+        <Setter Property="Width" Value="120"/>
+    </Style>
+
+    <Style TargetType="TextBox">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="formTextBox">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="Width" Value="170"/>
+    </Style>
+
+
+    <Style TargetType="Frame">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+    <Style TargetType="Grid">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+    </Style>
+    <Style TargetType="ListView">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="Height" Value="350"/>
+        <Setter Property="Width" Value="600"/>
+    </Style>
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+    </Style>
+
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="{DynamicResource MenuItemColor}"/>
+    </Style>
+
+    <Style TargetType="StatusBar">
+        <Setter Property="Background" Value="LightGray"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="sbText">
+        <Setter Property="Margin" Value="8"/>
+    </Style>
+
+
+</ResourceDictionary>   

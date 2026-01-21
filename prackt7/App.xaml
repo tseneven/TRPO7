@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:prackt7"
              StartupUri="mainFrames.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Colors/Default.xaml"/>
+                <ResourceDictionary Source="/Styles/UI/Buttons.xaml"/>
+                <ResourceDictionary Source="/Styles/UI/Elements.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -2,25 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Add.xaml.cs">
+    <Compile Update="Pages\Add.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Auth.xaml.cs">
+    <Compile Update="Pages\Auth.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="DeteilPacient.xaml.cs">
+    <Compile Update="Pages\DeteilPacient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Edit.xaml.cs">
+    <Compile Update="Pages\Edit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Main.xaml.cs">
+    <Compile Update="Pages\Main.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="mainFrames.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Register.xaml.cs">
+    <Compile Update="Pages\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

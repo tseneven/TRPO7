@@ -1,0 +1,41 @@
+﻿<Page x:Class="prackt7.Register"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prackt7"
+      mc:Ignorable="d" 
+      Title="Register">
+
+    <StackPanel Orientation ="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label HorizontalAlignment="Center" >Регистрация</Label>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}">Фамилия</Label>
+            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding LastName, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}">Имя</Label>
+            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Name, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}">Отчество</Label>
+            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding MiddleName, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}">Специализация</Label>
+            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Spectialisation, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}">Пароль</Label>
+            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Password, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
+            <Label Style="{StaticResource formLabel}" >Повтоите пароль</Label>
+            <TextBox x:Name="rep_pass" Style="{StaticResource formTextBox}" ></TextBox>
+        </StackPanel>
+        <Button Click="Button_Click">Зарегистрироваться</Button>
+        <Label x:Name="Reg_But" HorizontalAlignment="Center" >
+            <Hyperlink NavigateUri="Auth.xaml">Авторизация</Hyperlink>
+        </Label>
+    </StackPanel>
+</Page>
