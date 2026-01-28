@@ -4,35 +4,145 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
+      xmlns:validators="clr-namespace:prackt7.Validation"
       mc:Ignorable="d" 
       Title="Register">
 
     <StackPanel Orientation ="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Label HorizontalAlignment="Center" >Регистрация</Label>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}">Фамилия</Label>
-            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding LastName, Mode=TwoWay}"></TextBox>
+            <TextBox x:Name="LastNameF" Style="{StaticResource formTextBox}"  >
+                <TextBox.Text>
+                    <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=LastNameF, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}">Имя</Label>
-            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Name, Mode=TwoWay}"></TextBox>
+            <TextBox Style="{StaticResource formTextBox}"  x:Name="NameF">
+                <TextBox.Text>
+                    <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=NameF, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}">Отчество</Label>
-            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding MiddleName, Mode=TwoWay}"></TextBox>
+            <TextBox Style="{StaticResource formTextBox}" x:Name="MiddleNameF">
+                <TextBox.Text>
+                    <Binding Path="MiddleName" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=MiddleNameF, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}">Специализация</Label>
-            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Spectialisation, Mode=TwoWay}"></TextBox>
+            <TextBox Style="{StaticResource formTextBox}"  x:Name="SpectialisationF">
+                <TextBox.Text>
+                    <Binding Path="Spectialisation" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=SpectialisationF, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}">Пароль</Label>
-            <TextBox Style="{StaticResource formTextBox}"  Text="{Binding Password, Mode=TwoWay}"></TextBox>
+            <TextBox Style="{StaticResource formTextBox}"  x:Name="PasswordF">
+                <TextBox.Text>
+                    <Binding Path="Password" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=PasswordF, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
             <Label Style="{StaticResource formLabel}" >Повтоите пароль</Label>
-            <TextBox x:Name="rep_pass" Style="{StaticResource formTextBox}" ></TextBox>
+            <TextBox x:Name="rep_pass" Style="{StaticResource formTextBox}" >
+                <TextBox.Text>
+                    <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=LastName_Add, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
+        
         <Button Click="Button_Click">Зарегистрироваться</Button>
         <Label x:Name="Reg_But" HorizontalAlignment="Center" >
             <Hyperlink NavigateUri="Auth.xaml">Авторизация</Hyperlink>

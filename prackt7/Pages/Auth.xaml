@@ -5,17 +5,52 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
       mc:Ignorable="d" 
+      xmlns:validators="clr-namespace:prackt7.Validation"
       Title="Auth">
 
     <StackPanel Style="{StaticResource formPanel}">
         <Label Width="40">Вход</Label>
         <StackPanel>
             <Label Style="{StaticResource formLabel}">ID</Label>
-            <TextBox x:Name="Auth_Id" Style="{StaticResource formTextBox}" ></TextBox>
+            <TextBox x:Name="Auth_Id" Style="{StaticResource formTextBox}" >
+                <TextBox.Text>
+                    <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+                          FontSize="10"
+                          ItemsSource="{Binding ElementName=Auth_Id, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
         <StackPanel>
             <Label Style="{StaticResource formLabel}">Пароль</Label>
-            <TextBox Style="{StaticResource formTextBox}" Text="{Binding Password, Mode=TwoWay }"></TextBox>
+            <TextBox Style="{StaticResource formTextBox}" x:Name="Auth_pass">
+                <TextBox.Text>
+                    <Binding Path="Password" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validators:FieldValidatior/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <ItemsControl Foreground="Red"
+                          FontSize="10"
+                          ItemsSource="{Binding ElementName=Auth_pass, Path=(Validation.Errors)}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
         <Button Click="Button_Click">Вход</Button>
         <Label x:Name="Reg_But" HorizontalAlignment="Center" >

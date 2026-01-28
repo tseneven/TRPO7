@@ -68,8 +68,8 @@ namespace prackt7
 
             }
         }
-        private string _birthday;
-        public string Birthday
+        private DateTime? _birthday;
+        public DateTime? Birthday
         {
             get => _birthday;
             set
@@ -82,10 +82,9 @@ namespace prackt7
 
             }
         }
+        private long? _phoneNumber;
 
-        private string? _phoneNumber;
-
-        public string? PhoneNumber
+        public long? PhoneNumber
         {
             get => _phoneNumber;
             set
@@ -119,7 +118,7 @@ namespace prackt7
         private ObservableCollection<Appointment>? _appointmentStories;
         public ObservableCollection<Appointment>? AppointmentStories
         {
-            get => _appointmentStories;
+            get => _appointmentStories ?? new ObservableCollection<Appointment>();
             set
             {
                 if (_appointmentStories != value)
@@ -130,6 +129,31 @@ namespace prackt7
 
             }
         }
+
+        private Appointment? _lastAppointment;
+
+
+        public Appointment? LastAppointment
+        {
+            set
+            {
+                if(AppointmentStories.Count != 0 && AppointmentStories != null)
+                {
+                    var lastOr = AppointmentStories.OrderByDescending(a => a.Date).FirstOrDefault();
+                    _lastAppointment = lastOr;
+                    OnPropertyChanged();
+                }
+            }
+            get
+            {
+                return _lastAppointment ?? new Appointment();
+            }
+
+        }
+
+
+
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

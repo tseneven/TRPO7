@@ -5,7 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
       mc:Ignorable="d" 
+      xmlns:converters="clr-namespace:prackt7.Validation"
       Title="Main" Loaded="Page_Loaded">
+    <Page.Resources>
+        <converters:AgeConverter x:Key="ageConverter"/>
+    </Page.Resources>
+
+
+
+
     <DockPanel
         LastChildFill="false">
         <Menu VerticalAlignment="Top" DockPanel.Dock="Top">
@@ -41,9 +49,19 @@
                             <TextBlock Text="{Binding MiddleName}"/>
                         </StackPanel>
                         <StackPanel>
-                            <TextBlock Text="Возраст: "/>
-                            <TextBlock Text="{Binding Birthday}"/>
+                            <TextBlock Text="Дата рождения: "/>
+                            <TextBlock Text="{Binding Birthday, StringFormat={}{0:d}}"/>
                         </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Номер телефона: "/>
+                            <TextBlock Text="{Binding PhoneNumber, StringFormat={}{0:# (###) ### ## ##} }"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Дееспособность: "/>
+                            <TextBlock Text="{Binding Birthday, Converter={StaticResource  ageConverter}}"/>
+                        </StackPanel>
+                        
+
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

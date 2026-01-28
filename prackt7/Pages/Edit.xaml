@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
+      xmlns:validators="clr-namespace:prackt7.Validation"
       mc:Ignorable="d" 
       Title="Edit">
 
@@ -12,7 +13,7 @@
         LastChildFill="false">
 
         <StackPanel DockPanel.Dock="Top">
-            <Button Click="Button_Click"  Style="{StaticResource DeleteButton}">Назад</Button>
+            <Button Click="Button_Click">Назад</Button>
             <Button Click="Button_Click_1"  Style="{StaticResource AddButton}">Отредактировать</Button>
         </StackPanel>
 
@@ -22,27 +23,115 @@
 
             <StackPanel>
                 <Label Style="{StaticResource formLabel}">Фамилия</Label>
-                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" Text="{Binding LastName, Mode=TwoWay  }" ></TextBox>
+                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" >
+                    <TextBox.Text>
+                        <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+                                FontSize="10"
+                                ItemsSource="{Binding ElementName=LastName_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel>
                 <Label Style="{StaticResource formLabel}">Имя</Label>
-                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}" Text="{Binding Name, Mode=TwoWay  }"></TextBox>
+                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+                FontSize="10"
+                ItemsSource="{Binding ElementName=Name_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel >
                 <Label Style="{StaticResource formLabel}">Отчество</Label>
-                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}" Text="{Binding MiddleName, Mode=TwoWay  }"></TextBox>
+                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}">
+                        <TextBox.Text>
+                        <Binding Path="MiddleName" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <validators:FieldValidatior/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <ItemsControl Foreground="Red"
+                FontSize="10"
+                ItemsSource="{Binding ElementName=MiddleName_Add, Path=(Validation.Errors)}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
             </StackPanel>
 
             <StackPanel >
                 <Label Style="{StaticResource formLabel}">Дата рождения</Label>
-                <TextBox x:Name="Date_Add" Style="{StaticResource formTextBox}" Text="{Binding Birthday, Mode=TwoWay  }"></TextBox>
+                <TextBox x:Name="Date_Add" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="Birthday" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+                FontSize="10"
+                ItemsSource="{Binding ElementName=Date_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
             </StackPanel>
 
             <StackPanel >
                 <Label Style="{StaticResource formLabel}">Телефон</Label>
-                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}"  Text="{Binding PhoneNumber, Mode=TwoWay  }"></TextBox>
+                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="PhoneNumber" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+                FontSize="10"
+                ItemsSource="{Binding ElementName=Date_d, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
             </StackPanel>
 
 

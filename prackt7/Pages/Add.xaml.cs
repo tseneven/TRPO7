@@ -43,7 +43,7 @@ namespace prackt7
         {
             try
             {
-                if (!string.IsNullOrEmpty(_pacient.LastName) && !string.IsNullOrEmpty(_pacient.Name) && !string.IsNullOrEmpty(_pacient.MiddleName) && !string.IsNullOrEmpty(_pacient.Birthday))
+                if (!string.IsNullOrEmpty(_pacient.LastName) && !string.IsNullOrEmpty(_pacient.Name) && !string.IsNullOrEmpty(_pacient.MiddleName) && !string.IsNullOrEmpty(_pacient.Birthday.ToString()))
                 {
                     int id = 0;
                     while (true)
@@ -75,5 +75,9 @@ namespace prackt7
 
         }
 
+        private void Page_Initialized(object sender, EventArgs e)
+        {
+            datePicker1.SelectedDate = DateTime.Today;
+        }
     }
 }

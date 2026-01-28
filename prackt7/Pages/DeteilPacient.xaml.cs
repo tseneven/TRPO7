@@ -59,7 +59,7 @@ namespace prackt7
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            _appointment.Date = DateTime.Now.ToString();
+            _appointment.Date = DateTime.Now;
             _appointment.Doctor_id = currDoctor.ToString();
             _pacient.AppointmentStories.Add(_appointment);
 

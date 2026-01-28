@@ -11,8 +11,8 @@ namespace prackt7
 {
     public class Appointment : INotifyPropertyChanged
     {
-        private string _date;
-        public string Date
+        private DateTime? _date;
+        public DateTime? Date
         {
             get => _date;
             set
@@ -26,8 +26,8 @@ namespace prackt7
             }
         }
 
-        private string _doctor_id;
-        public string Doctor_id
+        private string? _doctor_id;
+        public string? Doctor_id
         {
             get => _doctor_id;
             set
@@ -40,8 +40,8 @@ namespace prackt7
 
             }
         }
-        private string _diagnosis;
-        public string Diagnosis
+        private string? _diagnosis;
+        public string? Diagnosis
         {
             get => _diagnosis;
             set
@@ -54,7 +54,7 @@ namespace prackt7
 
             }
         }
-        private string _recomendations;
+        private string? _recomendations;
         public string Recomendations
         {
             get => _recomendations;

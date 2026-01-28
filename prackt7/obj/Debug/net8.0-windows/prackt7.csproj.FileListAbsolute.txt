@@ -37,3 +37,4 @@ C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Page
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Pages\Main.baml
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Pages\Register.baml
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Styles\UI\Elements.baml
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

@@ -33,6 +33,28 @@
     <Style TargetType="TextBox">
         <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
         <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            CornerRadius="0">
+                            <TextBox>
+                                <TextBox.Text>
+                                <Binding Path="Field" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        
+                                    </Binding.ValidationRules>
+                                </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style TargetType="TextBox" x:Key="formTextBox">
@@ -58,10 +80,13 @@
     </Style>
     <Style TargetType="Menu">
         <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource PagesBackground}"/>
     </Style>
 
     <Style TargetType="MenuItem">
-        <Setter Property="Background" Value="{DynamicResource MenuItemColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PagesBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource PagesBackground}"/>
+
     </Style>
 
     <Style TargetType="StatusBar">

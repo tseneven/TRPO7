@@ -4,8 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
+      xmlns:validators="clr-namespace:prackt7.Validation"
+      xmlns:converters="clr-namespace:prackt7.Validation"
       mc:Ignorable="d" 
       Title="DeteilPacient">
+
+    <Page.Resources>
+        <converters:DaysConverter x:Key="daysConverter"/>
+    </Page.Resources>
 
     <DockPanel
         LastChildFill="false">
@@ -24,44 +30,92 @@
 
                 <StackPanel Style="{StaticResource formPanel}">
                     <Label Style="{StaticResource formLabel}">Диагноз</Label>
-                    <TextBox Style="{StaticResource formTextBox}" Text="{Binding Diagnosis, Mode=TwoWay  }" ></TextBox>
+                    <TextBox Style="{StaticResource formTextBox}"  x:Name="DiagnosisD">
+                        <TextBox.Text>
+                            <Binding Path="Diagnosis" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <validators:FieldValidatior/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <ItemsControl Foreground="Red"
+                FontSize="10"
+                ItemsSource="{Binding ElementName=DiagnosisD, Path=(Validation.Errors)}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource formPanel}">
                     <Label Style="{StaticResource formLabel}">Рекомендации</Label>
-                    <TextBox  Style="{StaticResource formTextBox}" Text="{Binding Recomendations, Mode=TwoWay  }"></TextBox>
+                    <TextBox  Style="{StaticResource formTextBox}" x:Name="RecomendationsD">
+                        <TextBox.Text>
+                            <Binding Path="Recomendations" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <validators:FieldValidatior/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                    <ItemsControl Foreground="Red"
+FontSize="10"
+ItemsSource="{Binding ElementName=RecomendationsD, Path=(Validation.Errors)}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
                 </StackPanel>
 
 
 
-            </StackPanel>
-            <ListView x:Name="ListView" ItemsSource="{Binding AppointmentStories}" Initialized="ListView_Initialized" SelectedItem="{Binding SelectedApp}" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical" Style="{StaticResource formPanel}">
-                            <StackPanel>
-                                <TextBlock Text="Дата: "/>
-                                <TextBlock Text="{Binding Date}"/>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Text="Доктор: "/>
-                                <TextBlock Text="{Binding Doctor_id}"/>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Text="Диагноз: "/>
-                                <TextBlock Text="{Binding Diagnosis}"/>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Text="Рекомендации: "/>
-                                <TextBlock Text="{Binding Recomendations}"/>
-                            </StackPanel>
-                        </StackPanel>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            </StackPanel>
+            <StackPanel Style="{StaticResource formPanel}" x:Name="ListView">
+                <ListView  ItemsSource="{Binding AppointmentStories}" Initialized="ListView_Initialized" SelectedItem="{Binding SelectedApp}" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" Style="{StaticResource formPanel}">
+                                <StackPanel>
+                                    <TextBlock Text="Дата: "/>
+                                    <TextBlock Text="{Binding Date}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Доктор: "/>
+                                    <TextBlock Text="{Binding Doctor_id}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Диагноз: "/>
+                                    <TextBlock Text="{Binding Diagnosis}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Рекомендации: "/>
+                                    <TextBlock Text="{Binding Recomendations}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackPanel Style="{StaticResource formPanel}">
+                    <Label>Дней с последнего приема:</Label>
+                    <Label Content="{Binding LastAppointment,
+                 Converter={StaticResource daysConverter}}"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
 
         </StackPanel>
+
 
         <StatusBar DockPanel.Dock="Bottom">
             <TextBlock x:Name="Counts" DockPanel.Dock="Bottom" 

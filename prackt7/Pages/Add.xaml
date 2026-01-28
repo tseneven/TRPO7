@@ -5,7 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
       mc:Ignorable="d" 
-      Title="Add">
+      xmlns:converters="clr-namespace:prackt7.Validation"
+      xmlns:validators="clr-namespace:prackt7.Validation"
+      Title="Add" Initialized="Page_Initialized">
+
+    <Page.Resources>
+        <converters:AgeConverter x:Key="ageConverter"/>
+    </Page.Resources>
+    
+    
 
     <DockPanel
         LastChildFill="false">
@@ -21,28 +29,104 @@
 
             <StackPanel  Style="{StaticResource formPanel}">
                 <Label Style="{StaticResource formLabel}">Фамилия</Label>
-                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" Text="{Binding LastName, Mode=TwoWay}" ></TextBox>
+                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" >
+                    <TextBox.Text>
+                        <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+                          FontSize="10"
+                          ItemsSource="{Binding ElementName=LastName_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel Style="{StaticResource formPanel}">
                 <Label Style="{StaticResource formLabel}">Имя</Label>
-                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}" Text="{Binding Name, Mode=TwoWay  }"></TextBox>
+                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=Name_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel  Style="{StaticResource formPanel}">
                 <Label Style="{StaticResource formLabel}">Отчество</Label>
-                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}" Text="{Binding MiddleName, Mode=TwoWay  }"></TextBox>
-            </StackPanel>
-
-            <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Дата рождения</Label>
-                <TextBox x:Name="Date_Add" Style="{StaticResource formTextBox}" Text="{Binding Birthday, Mode=TwoWay  }"></TextBox>
+                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="MiddleName" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=MiddleName_Add, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
 
             <StackPanel  Style="{StaticResource formPanel}">
                 <Label Style="{StaticResource formLabel}">Телефон</Label>
-                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}" Text="{Binding PhoneNumber, Mode=TwoWay  }"></TextBox>
+                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}">
+                    <TextBox.Text>
+                        <Binding Path="PhoneNumber" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validators:FieldValidatior/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <ItemsControl Foreground="Red"
+          FontSize="10"
+          ItemsSource="{Binding ElementName=Date_d, Path=(Validation.Errors)}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
+
+            <StackPanel  Style="{StaticResource formPanel}">
+                <Label Style="{StaticResource formLabel}">Дееспособность</Label>
+                <TextBox Style="{StaticResource formTextBox}" IsReadOnly="True" Text="{Binding Birthday, Converter={StaticResource  ageConverter}, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </StackPanel>
+
+
+            <StackPanel  Style="{StaticResource formPanel}">
+                <Label Style="{StaticResource formLabel}">Дата рождения</Label>
+                <DatePicker x:Name="datePicker1" DisplayDateStart ="01/01/1890" SelectedDate="{Binding Birthday, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged  }"></DatePicker>
+            </StackPanel>
+
+
         </StackPanel>
 
 
