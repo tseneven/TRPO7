@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\validation\\ageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\validation\\ageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\pages\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\pages\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\validation\\daysconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\validation\\daysconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,20 +35,8 @@
       "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\pages\\deteilpacient.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\pages\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\pages\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\validation\\fieldvalidatior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\validation\\fieldvalidatior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\validation\\ageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|solutionrelative:prackt7\\validation\\ageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7260BCB8-B41D-4076-BF55-8FA4AA89CAB4}|prackt7\\prackt7.csproj|c:\\users\\neven\\desktop\\ucheba\\trpo\\prackt7\\prackt7\\styles\\ui\\elements.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,43 +103,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DaysConverter.cs",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\DaysConverter.cs",
-              "RelativeDocumentMoniker": "prackt7\\Validation\\DaysConverter.cs",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\DaysConverter.cs",
-              "RelativeToolTip": "prackt7\\Validation\\DaysConverter.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T09:18:19.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeteilPacient.xaml",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\DeteilPacient.xaml",
-              "RelativeDocumentMoniker": "prackt7\\Pages\\DeteilPacient.xaml",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\DeteilPacient.xaml",
-              "RelativeToolTip": "prackt7\\Pages\\DeteilPacient.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T08:51:22.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.xaml",
-              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Edit.xaml",
-              "RelativeDocumentMoniker": "prackt7\\Pages\\Edit.xaml",
-              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Edit.xaml",
-              "RelativeToolTip": "prackt7\\Pages\\Edit.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T08:43:36.632Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -167,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "FieldValidatior.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\FieldValidatior.cs",
               "RelativeDocumentMoniker": "prackt7\\Validation\\FieldValidatior.cs",
@@ -175,12 +138,11 @@
               "RelativeToolTip": "prackt7\\Validation\\FieldValidatior.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T08:12:25.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:12:25.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Pacient.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Model\\Pacient.cs",
               "RelativeDocumentMoniker": "prackt7\\Model\\Pacient.cs",
@@ -188,12 +150,11 @@
               "RelativeToolTip": "prackt7\\Model\\Pacient.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T06:09:13.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T06:09:13.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "DeteilPacient.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\DeteilPacient.xaml.cs",
               "RelativeDocumentMoniker": "prackt7\\Pages\\DeteilPacient.xaml.cs",
@@ -201,25 +162,23 @@
               "RelativeToolTip": "prackt7\\Pages\\DeteilPacient.xaml.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAAD0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T08:55:42.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:55:42.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Main.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Main.xaml.cs",
               "RelativeDocumentMoniker": "prackt7\\Pages\\Main.xaml.cs",
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Main.xaml.cs",
               "RelativeToolTip": "prackt7\\Pages\\Main.xaml.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T09:25:52.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T09:25:52.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Model\\Appointment.cs",
               "RelativeDocumentMoniker": "prackt7\\Model\\Appointment.cs",
@@ -227,25 +186,23 @@
               "RelativeToolTip": "prackt7\\Model\\Appointment.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T08:56:04.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:56:04.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "AgeConverter.cs",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\AgeConverter.cs",
               "RelativeDocumentMoniker": "prackt7\\Validation\\AgeConverter.cs",
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\AgeConverter.cs",
               "RelativeToolTip": "prackt7\\Validation\\AgeConverter.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAmwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T06:26:16.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T06:26:16.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Main.xaml",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Main.xaml",
               "RelativeDocumentMoniker": "prackt7\\Pages\\Main.xaml",
@@ -257,6 +214,40 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.xaml",
+              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Edit.xaml",
+              "RelativeDocumentMoniker": "prackt7\\Pages\\Edit.xaml",
+              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Edit.xaml",
+              "RelativeToolTip": "prackt7\\Pages\\Edit.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-28T08:43:36.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DaysConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\DaysConverter.cs",
+              "RelativeDocumentMoniker": "prackt7\\Validation\\DaysConverter.cs",
+              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Validation\\DaysConverter.cs",
+              "RelativeToolTip": "prackt7\\Validation\\DaysConverter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T09:18:19.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeteilPacient.xaml",
+              "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\DeteilPacient.xaml",
+              "RelativeDocumentMoniker": "prackt7\\Pages\\DeteilPacient.xaml",
+              "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\DeteilPacient.xaml",
+              "RelativeToolTip": "prackt7\\Pages\\DeteilPacient.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-28T08:51:22.2Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Register.xaml",
               "DocumentMoniker": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Register.xaml",
@@ -264,8 +255,7 @@
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Register.xaml",
               "RelativeToolTip": "prackt7\\Pages\\Register.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T08:47:56.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:47:56.174Z"
             },
             {
               "$type": "Document",
@@ -276,8 +266,7 @@
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\mainFrames.xaml",
               "RelativeToolTip": "prackt7\\mainFrames.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T07:05:29.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T07:05:29.813Z"
             },
             {
               "$type": "Document",
@@ -289,8 +278,7 @@
               "RelativeToolTip": "prackt7\\Pages\\Add.xaml.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAgwE0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T06:09:58.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T06:09:58.816Z"
             },
             {
               "$type": "Document",
@@ -301,8 +289,7 @@
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Add.xaml",
               "RelativeToolTip": "prackt7\\Pages\\Add.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T06:08:49.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T06:08:49.071Z"
             },
             {
               "$type": "Document",
@@ -313,8 +300,7 @@
               "ToolTip": "C:\\Users\\Neven\\Desktop\\Ucheba\\TRPO\\prackt7\\prackt7\\Pages\\Auth.xaml",
               "RelativeToolTip": "prackt7\\Pages\\Auth.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T08:28:56.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:28:56.084Z"
             },
             {
               "$type": "Document",
@@ -326,8 +312,7 @@
               "RelativeToolTip": "prackt7\\Model\\Doc.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T08:37:10.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T08:37:10.124Z"
             }
           ]
         }
