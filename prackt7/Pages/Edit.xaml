@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:prackt7"
       xmlns:validators="clr-namespace:prackt7.Validation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       Title="Edit">
 
@@ -13,17 +14,16 @@
         LastChildFill="false">
 
         <StackPanel DockPanel.Dock="Top">
-            <Button Click="Button_Click">Назад</Button>
-            <Button Click="Button_Click_1"  Style="{StaticResource AddButton}">Отредактировать</Button>
+            <Button Click="Button_Click" Background="{DynamicResource MainButton}">Назад</Button>
+            <Button Click="Button_Click_1" Background="{DynamicResource MainButton}">Отредактировать</Button>
         </StackPanel>
 
 
         <StackPanel x:Name="addForm"  DockPanel.Dock="Top" Style="{StaticResource formPanel}">
-            <Label>Форма добавления пациента</Label>
+            <Label>Форма редактирования пациента</Label>
 
             <StackPanel>
-                <Label Style="{StaticResource formLabel}">Фамилия</Label>
-                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" >
+                <TextBox x:Name="LastName_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Фамилия">
                     <TextBox.Text>
                         <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -44,8 +44,7 @@
             </StackPanel>
 
             <StackPanel>
-                <Label Style="{StaticResource formLabel}">Имя</Label>
-                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}">
+                <TextBox  x:Name="Name_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Имя">
                     <TextBox.Text>
                         <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -66,8 +65,7 @@
             </StackPanel>
 
             <StackPanel >
-                <Label Style="{StaticResource formLabel}">Отчество</Label>
-                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}">
+                <TextBox x:Name="MiddleName_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Отчество">
                         <TextBox.Text>
                         <Binding Path="MiddleName" UpdateSourceTrigger="PropertyChanged">
                                 <Binding.ValidationRules>
@@ -89,8 +87,7 @@
             </StackPanel>
 
             <StackPanel >
-                <Label Style="{StaticResource formLabel}">Дата рождения</Label>
-                <TextBox x:Name="Date_Add" Style="{StaticResource formTextBox}">
+                <TextBox x:Name="Date_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Дата рождения">
                     <TextBox.Text>
                         <Binding Path="Birthday" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -112,8 +109,7 @@
             </StackPanel>
 
             <StackPanel >
-                <Label Style="{StaticResource formLabel}">Телефон</Label>
-                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}">
+                <TextBox x:Name="Date_d" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Телефон">
                     <TextBox.Text>
                         <Binding Path="PhoneNumber" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>

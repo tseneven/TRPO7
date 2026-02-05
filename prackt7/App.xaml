@@ -2,14 +2,24 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:prackt7"
+             xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
              StartupUri="mainFrames.xaml">
     <Application.Resources>
         <ResourceDictionary>
+
+            <materialDesign:BundledTheme
+                x:Key="MaterialDesignTheme"
+                BaseTheme="Light"
+                PrimaryColor="DeepPurple"
+                SecondaryColor="Lime"/>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/Colors/Default.xaml"/>
                 <ResourceDictionary Source="/Styles/UI/Buttons.xaml"/>
                 <ResourceDictionary Source="/Styles/UI/Elements.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign2.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

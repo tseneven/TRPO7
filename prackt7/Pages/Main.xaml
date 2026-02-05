@@ -22,10 +22,10 @@
             </MenuItem>
         </Menu>
         <StackPanel DockPanel.Dock="Top">
-            <Button x:Name="add_btn" Click="add_btn_Click" Style="{StaticResource AddButton}">Создать пациента</Button>
-            <Button x:Name="delete_btn" Click="delete_btn_Click" Style="{StaticResource DeleteButton}"></Button>
-            <Button Click="Button_Click">Начать прием</Button>
-            <Button Click="Button_Click_1">Изменить информацию</Button>
+            <Button x:Name="add_btn" Click="add_btn_Click" Background="{DynamicResource MainButton}">Создать пациента</Button>
+            <Button x:Name="delete_btn"  Click="delete_btn_Click" Background="{DynamicResource DangerButton}">Удалить пациента</Button>
+            <Button Click="Button_Click" Background="{DynamicResource MainButton}">Начать прием</Button>
+            <Button Click="Button_Click_1" Background="{DynamicResource MainButton}">Изменить информацию</Button>
         </StackPanel>
 
         <ListView DockPanel.Dock="Top" ItemsSource="{Binding Pacients}" SelectedItem="{Binding SelectedPacient}" >
@@ -62,7 +62,8 @@
                         </StackPanel>
                         
 
-                    </StackPanel>
+                    </StackPanel>
+
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

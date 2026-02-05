@@ -1,18 +1,17 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush x:Key="ButtonBackground" Color="#0078D4"/>
-    <SolidColorBrush x:Key="ButtonHover" Color="#005A9E"/>
-    <SolidColorBrush x:Key="ButtonPressed" Color="#004578"/>
-    <SolidColorBrush x:Key="ButtonForeground" Color="#FFFFFF"/>
-    <SolidColorBrush x:Key="ButtonBorder" Color="#005A9E"/>
-    <SolidColorBrush x:Key="PagesBackground" Color="White"/>
-    <SolidColorBrush x:Key="LabelColor" Color="Black"/>
-    <SolidColorBrush x:Key="MenuItemColor" Color="White"/>
-    <SolidColorBrush x:Key="AddButtonBackground" Color="Green"/>
-    <SolidColorBrush x:Key="AddButtonHover" Color="GreenYellow"/>
-    <SolidColorBrush x:Key="AddButtonPressed" Color="LightGreen"/>
-    <SolidColorBrush x:Key="DeleteButtonBackground" Color="Red"/>
-    <SolidColorBrush x:Key="DeleteButtonHover" Color="DarkRed"/>
-    <SolidColorBrush x:Key="DeleteButtonPressed" Color="OrangeRed"/>
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="Background" Color="#F5FAFB"/>
+    <SolidColorBrush x:Key="Panel" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Titles" Color="#2E3B4E"/>
+    <SolidColorBrush x:Key="MainText" Color="#444B54"/>
+    <SolidColorBrush x:Key="MinorText" Color="#6E7A89"/>
+    <SolidColorBrush x:Key="MainButton" Color="#33B8B1"/>
+    <SolidColorBrush x:Key="DangerButton" Color="#E65A4F"/>
+    <SolidColorBrush x:Key="TextField" Color="#F0F6F8"/>
+    <SolidColorBrush x:Key="Akcaint" Color="#3A9AD9"/>
+    <SolidColorBrush x:Key="ErrorValidationBackground" Color="#FFE8E8"/>
+    <SolidColorBrush x:Key="ErrorValidationBorder" Color="#D93025"/>
 
 </ResourceDictionary>

@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       xmlns:converters="clr-namespace:prackt7.Validation"
       xmlns:validators="clr-namespace:prackt7.Validation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Title="Add" Initialized="Page_Initialized">
 
     <Page.Resources>
@@ -19,8 +20,8 @@
         LastChildFill="false">
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-            <Button Click="Button_Click">Назад</Button>
-            <Button Click="Button_Click_1" Style="{StaticResource AddButton}">Создать пациента</Button>
+            <Button Click="Button_Click" Background="{DynamicResource MainButton}">Назад</Button>
+            <Button Click="Button_Click_1" Background="{DynamicResource MainButton}">Создать пациента</Button>
         </StackPanel>
 
 
@@ -28,8 +29,7 @@
             <Label>Форма добавления пациента</Label>
 
             <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Фамилия</Label>
-                <TextBox x:Name="LastName_Add" Style="{StaticResource formTextBox}" >
+                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Фамилия"  >
                     <TextBox.Text>
                         <Binding Path="LastName" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -38,7 +38,7 @@
                         </Binding>
                     </TextBox.Text>
                 </TextBox>
-                <ItemsControl Foreground="Red"
+                <ItemsControl Foreground="{DynamicResource ErrorValidationBackground}"
                           FontSize="10"
                           ItemsSource="{Binding ElementName=LastName_Add, Path=(Validation.Errors)}">
                     <ItemsControl.ItemTemplate>
@@ -50,8 +50,7 @@
             </StackPanel>
 
             <StackPanel Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Имя</Label>
-                <TextBox  x:Name="Name_Add" Style="{StaticResource formTextBox}">
+                <TextBox  x:Name="Name_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Имя" >
                     <TextBox.Text>
                         <Binding Path="Name" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -60,7 +59,7 @@
                         </Binding>
                     </TextBox.Text>
                 </TextBox>
-                <ItemsControl Foreground="Red"
+                <ItemsControl Foreground="{DynamicResource ErrorValidationBackground}"
           FontSize="10"
           ItemsSource="{Binding ElementName=Name_Add, Path=(Validation.Errors)}">
                     <ItemsControl.ItemTemplate>
@@ -72,8 +71,7 @@
             </StackPanel>
 
             <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Отчество</Label>
-                <TextBox x:Name="MiddleName_Add" Style="{StaticResource formTextBox}">
+                <TextBox x:Name="MiddleName_Add" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Отчество" >
                     <TextBox.Text>
                         <Binding Path="MiddleName" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -82,7 +80,7 @@
                         </Binding>
                     </TextBox.Text>
                 </TextBox>
-                <ItemsControl Foreground="Red"
+                <ItemsControl Foreground="{DynamicResource ErrorValidationBackground}"
           FontSize="10"
           ItemsSource="{Binding ElementName=MiddleName_Add, Path=(Validation.Errors)}">
                     <ItemsControl.ItemTemplate>
@@ -94,8 +92,7 @@
             </StackPanel>
 
             <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Телефон</Label>
-                <TextBox x:Name="Date_d" Style="{StaticResource formTextBox}">
+                <TextBox x:Name="Date_d" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Телефон">
                     <TextBox.Text>
                         <Binding Path="PhoneNumber" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
@@ -104,7 +101,7 @@
                         </Binding>
                     </TextBox.Text>
                 </TextBox>
-                <ItemsControl Foreground="Red"
+                <ItemsControl Foreground="{DynamicResource ErrorValidationBackground}"
           FontSize="10"
           ItemsSource="{Binding ElementName=Date_d, Path=(Validation.Errors)}">
                     <ItemsControl.ItemTemplate>
@@ -116,14 +113,12 @@
             </StackPanel>
 
             <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Дееспособность</Label>
-                <TextBox Style="{StaticResource formTextBox}" IsReadOnly="True" Text="{Binding Birthday, Converter={StaticResource  ageConverter}, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50"  IsReadOnly="True" Text="{Binding Birthday, Converter={StaticResource  ageConverter}, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Дееспособность"></TextBox>
             </StackPanel>
 
 
             <StackPanel  Style="{StaticResource formPanel}">
-                <Label Style="{StaticResource formLabel}">Дата рождения</Label>
-                <DatePicker x:Name="datePicker1" DisplayDateStart ="01/01/1890" SelectedDate="{Binding Birthday, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged  }"></DatePicker>
+                <DatePicker x:Name="datePicker1" Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Дата рождения" DisplayDateStart ="01/01/1890" SelectedDate="{Binding Birthday, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged  }"></DatePicker>
             </StackPanel>
 
 

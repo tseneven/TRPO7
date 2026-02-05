@@ -38,3 +38,9 @@ C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Page
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Pages\Register.baml
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\Styles\UI\Elements.baml
 C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.csproj.AssemblyReference.cache
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7_Content.g.cs
+C:\Users\Neven\Desktop\Ucheba\TRPO\prackt7\prackt7\obj\Debug\net8.0-windows\prackt7.csproj.Up2Date

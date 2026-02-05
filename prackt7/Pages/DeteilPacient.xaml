@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:prackt7"
       xmlns:validators="clr-namespace:prackt7.Validation"
       xmlns:converters="clr-namespace:prackt7.Validation"
+      xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       Title="DeteilPacient">
 
@@ -17,10 +18,10 @@
         LastChildFill="false">
 
         <StackPanel DockPanel.Dock="Top">
-            <Button Click="Button_Click" >Назад</Button>
-            <Button Click="Button_Click_1" Style="{StaticResource AddButton}">Создать прием</Button>
-            <Button Click="Delete_Click" Style="{StaticResource DeleteButton}"></Button>
-            <Button Click="Button_Click_2">Изменить пациента</Button>
+            <Button Click="Button_Click" Background="{DynamicResource MainButton}">Назад</Button>
+            <Button Click="Button_Click_1" Background="{DynamicResource MainButton}">Создать прием</Button>
+            <Button Click="Delete_Click" Background="{DynamicResource DangerButton}">Удалить прием</Button>
+            <Button Click="Button_Click_2" Background="{DynamicResource MainButton}">Изменить пациента</Button>
         </StackPanel>
 
 
@@ -29,8 +30,7 @@
                 <Label>Форма прием</Label>
 
                 <StackPanel Style="{StaticResource formPanel}">
-                    <Label Style="{StaticResource formLabel}">Диагноз</Label>
-                    <TextBox Style="{StaticResource formTextBox}"  x:Name="DiagnosisD">
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Диагноз"  x:Name="DiagnosisD">
                         <TextBox.Text>
                             <Binding Path="Diagnosis" UpdateSourceTrigger="PropertyChanged">
                                 <Binding.ValidationRules>
@@ -51,8 +51,7 @@
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource formPanel}">
-                    <Label Style="{StaticResource formLabel}">Рекомендации</Label>
-                    <TextBox  Style="{StaticResource formTextBox}" x:Name="RecomendationsD">
+                    <TextBox  Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" materialDesign:HintAssist.Hint="Рекомендации" x:Name="RecomendationsD">
                         <TextBox.Text>
                             <Binding Path="Recomendations" UpdateSourceTrigger="PropertyChanged">
                                 <Binding.ValidationRules>
