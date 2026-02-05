@@ -22,15 +22,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=LastNameF, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
@@ -43,15 +34,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=NameF, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
@@ -64,15 +46,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=MiddleNameF, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
@@ -85,15 +58,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=SpectialisationF, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
@@ -106,15 +70,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=PasswordF, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Style="{StaticResource formPanel}">
@@ -127,15 +82,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-          FontSize="10"
-          ItemsSource="{Binding ElementName=LastName_Add, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         
         <Button Click="Button_Click" Background="{DynamicResource MainButton}">Зарегистрироваться</Button>

@@ -61,7 +61,7 @@ namespace prackt7 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/prackt7;component/mainframes.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/prackt7;V1.0.0.0;component/mainframes.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\mainFrames.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

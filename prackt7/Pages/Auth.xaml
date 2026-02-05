@@ -8,7 +8,11 @@
       mc:Ignorable="d" 
       xmlns:validators="clr-namespace:prackt7.Validation"
       Title="Auth">
-
+    <Page.Resources>
+        <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignOutlinedTextBox}">
+            <Setter Property="AutomationProperties.Name" Value=""/>
+        </Style>
+    </Page.Resources>
     <StackPanel Style="{StaticResource formPanel}">
         <Label Width="40">Вход</Label>
         <StackPanel>
@@ -21,18 +25,9 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-                          FontSize="10"
-                          ItemsSource="{Binding ElementName=Auth_Id, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         <StackPanel>
-            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" x:Name="Auth_pass" materialDesign:HintAssist.Hint="Пароль" >
+            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Height="50" x:Name="Auth_pass" materialDesign:HintAssist.Hint="Пароль">
                 <TextBox.Text>
                     <Binding Path="Password" UpdateSourceTrigger="PropertyChanged">
                         <Binding.ValidationRules>
@@ -41,15 +36,6 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ItemsControl Foreground="Red"
-                          FontSize="10"
-                          ItemsSource="{Binding ElementName=Auth_pass, Path=(Validation.Errors)}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}" TextWrapping="Wrap"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
         <Button Click="Button_Click" Background="{DynamicResource MainButton}">Вход</Button>
         <Label x:Name="Reg_But" HorizontalAlignment="Center" >

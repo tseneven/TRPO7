@@ -31,8 +31,6 @@ namespace prackt7
             InitializeComponent();
             DataContext = _doc;
             IdReader.read();
-
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

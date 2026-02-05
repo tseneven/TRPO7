@@ -18,6 +18,10 @@
                 <ResourceDictionary Source="/Styles/UI/Buttons.xaml"/>
                 <ResourceDictionary Source="/Styles/UI/Elements.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign2.Defaults.xaml" />
+                <ResourceDictionary>
+                   
+
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>

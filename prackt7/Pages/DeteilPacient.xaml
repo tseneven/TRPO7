@@ -39,7 +39,7 @@
                             </Binding>
                         </TextBox.Text>
                     </TextBox>
-                    <ItemsControl Foreground="Red"
+                    <ItemsControl  Foreground="{DynamicResource ErrorValidationBackground}"
                 FontSize="10"
                 ItemsSource="{Binding ElementName=DiagnosisD, Path=(Validation.Errors)}">
                         <ItemsControl.ItemTemplate>
@@ -60,7 +60,7 @@
                             </Binding>
                         </TextBox.Text>
                     </TextBox>
-                    <ItemsControl Foreground="Red"
+                    <ItemsControl  Foreground="{DynamicResource ErrorValidationBackground}"
 FontSize="10"
 ItemsSource="{Binding ElementName=RecomendationsD, Path=(Validation.Errors)}">
                         <ItemsControl.ItemTemplate>
